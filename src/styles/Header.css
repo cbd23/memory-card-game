@@ -1,0 +1,23 @@
+.header-container {
+    border: 2px solid yellow;
+
+    width: 99vw;
+    color: white;
+    padding: 10px 0;
+    flex: 2 1 0;
+}
+
+.rules {
+    font-size: 1.5rem;
+}
+
+.best-score {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.current-score {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
