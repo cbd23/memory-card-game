@@ -5,15 +5,16 @@
     margin: 40px;
     flex: 1 0 220px;
     cursor: pointer;
-}
-
-.card-container:hover {
-    box-shadow: 0 0 8px 4px whitesmoke;
+    font-size: 1.1rem;
 }
 
 .actor-pic {
     width: 100%;
     border-radius: 8px;
+}
+
+.actor-pic:hover {
+    box-shadow: 0 0 8px 4px whitesmoke;
 }
 
 .actor-name {
