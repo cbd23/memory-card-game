@@ -1,16 +1,21 @@
 .card-container {
-    border: 1px solid rgb(252, 0, 227);
     border-radius: 8px;
-
     max-width: 220px;
     height: 400px;
     margin: 40px;
-
     flex: 1 0 220px;
-
     cursor: pointer;
 }
 
 .card-container:hover {
     box-shadow: 0 0 8px 4px whitesmoke;
+}
+
+.actor-pic {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.actor-name {
+    color: white;
 }
