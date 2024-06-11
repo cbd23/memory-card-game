@@ -1,10 +1,26 @@
 .footer-container {
-    border: 2px solid blue;
-
-
-    width: 100%;
-    justify-self: flex-end;
-
-
+    background-color: #ffffff;
+    width: 100vw;
+    height: 50px;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     flex: 1 1 0;
+}
+
+.footer-elements-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.odin-icon {
+    height: 38px;
+    border-radius: 50%;
+}
+
+.footer-text {
+    font-size: 1.2rem;
+    margin: 0 10px;
 }
