@@ -35,10 +35,14 @@ function App() {
       console.log(cards)
     }, [cards])
 
+    function handleClick(id) {
+      console.log(id)
+    }
+
   return (
     <div className='app-container'>
       <Header></Header>
-      <Main cards={cards}></Main>
+      <Main cards={cards} handleClick={handleClick}></Main>
       <Footer></Footer>
     </div>
   )
