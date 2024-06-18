@@ -2,9 +2,9 @@
 import './../styles/Main.css'
 import { Card } from './Card'
 
-export function Main({ cards }) {
+export function Main({ cards, handleClick }) {
 
-    const listCards = cards.map(card => <Card key={card.id} id={card.id} name={card.name} profilePath={card.profile_path}></Card>)
+    const listCards = cards.map(card => <Card key={card.id} id={card.id} name={card.name} profilePath={card.profile_path} handleClick={handleClick}></Card>)
 
     return (
         <div className='main-container'>
