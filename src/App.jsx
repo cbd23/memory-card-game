@@ -9,6 +9,9 @@ import { Footer } from './components/Footer'
 function App() {
 
   const [cards, setCards] = useState([])
+  const [clickedCards, setClickedCards] = useState([])
+  const [score, setScore] = useState(0)
+  const [bestScore, setBestScore] = useState(0)
   
   const options = {
     method: 'GET',
