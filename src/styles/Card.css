@@ -23,7 +23,6 @@
 
 @media screen and (width < 768px) {
     .card-container {
-        border: 1px solid deeppink;
         max-width: 110px;
         height: 240px;
     }
