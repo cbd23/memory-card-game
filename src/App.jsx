@@ -1,13 +1,10 @@
-import { Fragment, useEffect, useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { useEffect, useState } from 'react'
 import './App.css'
 import { Header } from './components/Header'
 import { Main } from './components/Main'
 import { Footer } from './components/Footer'
 
 function App() {
-
   const [cards, setCards] = useState([])
   const [clickedCards, setClickedCards] = useState([])
   let [score, setScore] = useState(0)
@@ -23,7 +20,6 @@ function App() {
 
   // fetch data from API on app load & store the first 12 actors (objects) needed to populate each card
   useEffect(() => {
-    
     fetch('https://api.themoviedb.org/3/person/popular?language=en-US&page=1', options)
       .then(response => response.json())
       .then(response => {
