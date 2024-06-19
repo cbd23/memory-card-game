@@ -44,6 +44,7 @@ function App() {
       setClickedCards([...clickedCards, card])
       setScore(score += 1)
       score > bestScore ? setBestScore(score) : null
+      score === 12 ? alert('Congrats! You clicked them all!') : null
     }
   }
 
