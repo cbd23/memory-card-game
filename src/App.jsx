@@ -21,7 +21,7 @@ function App() {
     }
   };
 
-  // fetch data from API on load & store the first 12 actors (objects) needed to populate each card into an array
+  // fetch data from API on app load & store the first 12 actors (objects) needed to populate each card
   useEffect(() => {
     
     fetch('https://api.themoviedb.org/3/person/popular?language=en-US&page=1', options)
@@ -33,40 +33,21 @@ function App() {
       .catch(err => console.error(err))
   }, [])
 
-  // log the cards array whenever it changes
-  useEffect(() => {
-    console.log(cards)
-  }, [cards])
-
-  // log the score & best score whenever they change
-  useEffect(() => {
-    console.log('SCORE: ' + score)
-    console.log('BEST SCORE: ' + bestScore)
-  }, [score, bestScore])
-
   // change cards' order & update the list of clickedCards after each click
   function handleClick(id) {
     shuffleCards()
     addToClicked(id)
-    console.log(clickedCards)
   }
 
   // verify whether a card was already clicked or not and update/reset the score & best score
   function addToClicked(card) {
     if (clickedCards.includes(card)) {
-      console.log(card + ' is already on the list')
-
       setClickedCards([])
       setScore(0)
-      console.log('score was reset to 0')
     } else {
       setClickedCards([...clickedCards, card])
       setScore(score += 1)
-
       score > bestScore ? setBestScore(score) : null
-
-      console.log('SCORE: ' + score)
-      console.log('BEST SCORE: ' + bestScore)
     }
   }
 
