@@ -82,7 +82,7 @@ function App() {
 
   return (
     <div className='app-container'>
-      <Header></Header>
+      <Header score={score} bestScore={bestScore}></Header>
       <Main cards={cards} handleClick={handleClick}></Main>
       <Footer></Footer>
     </div>
