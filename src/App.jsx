@@ -52,6 +52,11 @@ function App() {
     score === 12 ? alert('Congrats! You clicked them all!') : null
   }, [score])
 
+  // message the player when they reach the max score
+  useEffect(() => {
+    score === 12 ? alert('Congrats! You clicked them all!') : null
+  }, [score])
+
   // shuffle the array that stores the cards using the Fisher-Yates algorithm
   function shuffleCards() {
     const shuffled = [...cards];
