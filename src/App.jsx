@@ -49,7 +49,6 @@ function App() {
   // update bestScore whenever score increases & it's bigger than the actual bestScore
   useEffect(() => {
     score > bestScore ? setBestScore(score) : null
-    score === 12 ? alert('Congrats! You clicked them all!') : null
   }, [score])
 
   // message the player when they reach the max score
