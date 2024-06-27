@@ -43,10 +43,14 @@ function App() {
     } else {
       setClickedCards([...clickedCards, card])
       setScore(score => score + 1)
-      score > bestScore ? setBestScore(score) : null
-      score === 12 ? alert('Congrats! You clicked them all!') : null
     }
   }
+
+  // update bestScore whenever score increases & it's bigger than the actual bestScore
+  useEffect(() => {
+    score > bestScore ? setBestScore(score) : null
+    score === 12 ? alert('Congrats! You clicked them all!') : null
+  }, [score])
 
   // shuffle the array that stores the cards using the Fisher-Yates algorithm
   function shuffleCards() {
